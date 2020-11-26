@@ -2080,7 +2080,7 @@
                 <RunTimePermissions></RunTimePermissions>
             </Entity>
             <Entity
-             name="SimulatorGitThing"
+             name="TestThing"
              type="Thing">
                 <VisibilityPermissions>
                     <Visibility></Visibility>
@@ -2095,7 +2095,7 @@
                 <RunTimePermissions></RunTimePermissions>
             </Entity>
             <Entity
-             name="TestThing"
+             name="TestGit"
              type="Thing">
                 <VisibilityPermissions>
                     <Visibility></Visibility>

@@ -15,8 +15,8 @@
          enabled="true"
          homeMashup=""
          identifier=""
-         lastModifiedDate="2020-11-26T10:28:11.002Z"
-         name="TestThing"
+         lastModifiedDate="2020-11-26T10:07:27.291Z"
+         name="TestGit"
          projectName="Simulator"
          published="false"
          tags=""
@@ -100,38 +100,38 @@
                     </DataShape>
                     <Rows>
                         <Row>
-                            <BranchName>
-                            <![CDATA[
-                            master
-                            ]]>
-                            </BranchName>
+                            <BranchName></BranchName>
                             <CommitEmail>
                             <![CDATA[
-                            jdoe@ptc.com
+                            sabharee97@gmail.com
                             ]]>
                             </CommitEmail>
                             <CommitName>
                             <![CDATA[
-                            John Doe
+                            sabharee97
                             ]]>
                             </CommitName>
                             <FileRepository>
                             <![CDATA[
-                            GitRepository
+                            DeploymentRepository
                             ]]>
                             </FileRepository>
                             <GitRepoURL>
                             <![CDATA[
-                            https://bitbucket.org/username/reponame
+                            https://github.com/sabharee97/Test.git
                             ]]>
                             </GitRepoURL>
                             <Password></Password>
                             <RepoPathName>
                             <![CDATA[
-                            /smartparking
+                            /
                             ]]>
                             </RepoPathName>
-                            <User></User>
+                            <User>
+                            <![CDATA[
+                            sabharee97
+                            ]]>
+                            </User>
                         </Row>
                     </Rows>
                 </ConfigurationTable>
@@ -141,64 +141,7 @@
                 <ServiceDefinitions></ServiceDefinitions>
                 <EventDefinitions></EventDefinitions>
                 <ServiceMappings></ServiceMappings>
-                <ServiceImplementations>
-                    <ServiceImplementation
-                     description=""
-                     handlerName="Script"
-                     name="RunAllTests">
-                        <ConfigurationTables>
-                            <ConfigurationTable
-                             description=""
-                             isMultiRow="false"
-                             name="Script"
-                             ordinal="0">
-                                <DataShape>
-                                    <FieldDefinitions>
-                                        <FieldDefinition
-                                         baseType="STRING"
-                                         description="code"
-                                         name="code"
-                                         ordinal="0"></FieldDefinition>
-                                    </FieldDefinitions>
-                                </DataShape>
-                                <Rows>
-                                    <Row>
-                                        <code>
-                                        <![CDATA[
-                                        var params = {
-                                            infoTableName : "InfoTable",
-                                            dataShapeName : "TestResultData"
-                                        };
-                                        
-                                        // CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(TestResultData)
-                                        var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
-                                        
-                                        // TestResultData entry object
-                                        var FirstEntry = new Object();
-                                        FirstEntry.comments = "test result that passed the verification"; // STRING
-                                        FirstEntry.inputParams = {"name": "Mike"}; // JSON
-                                        FirstEntry.expectedOutput = {"name": "Mike"}; //JSON
-                                        FirstEntry.passed = true; // BOOLEAN
-                                        FirstEntry.testName = "Test for UserName Passed"; // STRING [Primary Key]
-                                        FirstEntry.timestamp = new Date(); // DATETIME [Primary Key]
-                                        
-                                        var SecondEntry = new Object();
-                                        SecondEntry.comments = "test result that failed the verification"; // STRING
-                                        SecondEntry.inputParams = {"name": "John"}; // JSON
-                                        SecondEntry.expectedOutput = {"name": "Mike"}; // JSON
-                                        SecondEntry.passed = false; // BOOLEAN
-                                        SecondEntry.testName = "Test for UserName Failed"; // STRING [Primary Key]
-                                        SecondEntry.timestamp = new Date(); // DATETIME [Primary Key]
-                                        result.AddRow(FirstEntry);
-                                        result.AddRow(SecondEntry);
-                                        ]]>
-                                        </code>
-                                    </Row>
-                                </Rows>
-                            </ConfigurationTable>
-                        </ConfigurationTables>
-                    </ServiceImplementation>
-                </ServiceImplementations>
+                <ServiceImplementations></ServiceImplementations>
                 <Subscriptions></Subscriptions>
             </ThingShape>
             <PropertyBindings></PropertyBindings>
@@ -207,9 +150,6 @@
             <RemoteEventBindings></RemoteEventBindings>
             <AlertConfigurations></AlertConfigurations>
             <ImplementedShapes>
-                <ImplementedShape
-                 name="TestingTS"
-                 type="ThingShape"></ImplementedShape>
                 <ImplementedShape
                  name="Git.Utility.ThingShape"
                  type="ThingShape"></ImplementedShape>
